@@ -409,7 +409,7 @@ void main(void)
         filesystem_init();
 
         /* We wait until HDD spins up to check for hold button */
-        if (button_hold()) {
+        if (!button_hold()) {
 //            fw = FW_APPLE;
             printf("Executing OF...");
             ata_sleepnow();
